@@ -1,0 +1,19 @@
+Word Puzzle Application by Summer Brochtrup
+
+Date August 14th, 2015
+
+Word Puzzle takes user entries and converts the vowels to dashes allowing another player to guess the entered word.
+
+-Setup Instructions-
+
+-Technologies Used-
+Java
+HTML5
+CSS
+Bootstrap ver 3.2.0
+jUnit ver 4.+
+Fluentlenium ver 0.10.3
+Velocity ver 1.7
+
+
+**High Five to Juliana Suzuki for working with me to figure out how to use form input variables in other pages

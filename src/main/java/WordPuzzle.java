@@ -6,8 +6,12 @@ import static spark.Spark.*;
 import java.util.Random;
 
 public class WordPuzzle {
+    //Create static Master variable
+    static String userEntryMaster;
+
     public static void main(String[] args) {
       String layout = "templates/layout.vtl";
+
       //staticFileLocation("/public");
 
       get("/", (request, response) -> {
@@ -21,6 +25,9 @@ public class WordPuzzle {
         model.put("template", "templates/wordpuzzleoutput.vtl");
 
         String userEntry = request.queryParams("userWord");
+        //pass results of form entry to master variable
+        userEntryMaster = formReturn(userEntry);
+
         String userOutput = encryptWord(userEntry);
 
         model.put("userEntry", userEntry);
@@ -28,7 +35,15 @@ public class WordPuzzle {
         return new ModelAndView(model, layout);
       }, new VelocityTemplateEngine());
 
+      get("/answer", (request, response) -> {
+        Map<String, Object> model = new HashMap<String, Object>();
+        model.put("template", "templates/wordpuzzleanswer.vtl");
 
+        //put results of form entry into hashmap
+        model.put("userEntryMaster", userEntryMaster);
+
+        return new ModelAndView(model, layout);
+      }, new VelocityTemplateEngine());
 
     }
 
@@ -60,5 +75,11 @@ public class WordPuzzle {
       // userWordUpperCase = userWordUpperCase.replace("O", "-");
       // userWordUpperCase = userWordUpperCase.replace("U", "-");
       // return userWordUpperCase;
+    }
+
+    //pass user entry into method updating master variable to access in other pages
+    public static String formReturn(String userEntry) {
+      userEntryMaster = userEntry;
+      return userEntryMaster;
     }
 }
