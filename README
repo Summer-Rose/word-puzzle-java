@@ -1,10 +1,15 @@
 Word Puzzle Application by Summer Brochtrup
+Epicodus Java Summer 2015 - Week One Code Review
 
 Date August 14th, 2015
 
-Word Puzzle takes user entries and converts the vowels to dashes allowing another player to guess the entered word.
+-Description-
+Word Puzzle takes user text entries and converts the vowels to dashes allowing another player to guess the entered word.
 
 -Setup Instructions-
+Clone this git repository
+Run with Gradle
+Open localhost:4567 in browser
 
 -Technologies Used-
 Java
@@ -16,4 +21,7 @@ Fluentlenium ver 0.10.3
 Velocity ver 1.7
 
 
-**High Five to Juliana Suzuki for working with me to figure out how to use form input variables in other pages
+**High Five to Juliana Suzuki for working with me to figure out how to use form input variables in multiple Velocity templates
+
+Copyright © 2015, Summer Brochtrup
+License information - Open source licensing

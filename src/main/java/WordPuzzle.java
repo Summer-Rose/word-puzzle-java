@@ -12,8 +12,6 @@ public class WordPuzzle {
     public static void main(String[] args) {
       String layout = "templates/layout.vtl";
 
-      //staticFileLocation("/public");
-
       get("/", (request, response) -> {
         Map<String, Object> model = new HashMap<String, Object>();
         model.put("template", "templates/wordpuzzleform.vtl");
@@ -77,7 +75,7 @@ public class WordPuzzle {
       // return userWordUpperCase;
     }
 
-    //pass user entry into method updating master variable to access in other pages
+    //pass user entry into method updating master variable to allow access in other pages
     public static String formReturn(String userEntry) {
       userEntryMaster = userEntry;
       return userEntryMaster;
