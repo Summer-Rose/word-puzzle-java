@@ -6,7 +6,14 @@ public class UnitTest {
    @Test
    public void encryptWord_userEntryConvertedToUppercase_true() {
      WordPuzzle testWordPuzzle = new WordPuzzle();
-     String testString = "A";
+     String testString = "-";
      assertEquals(testString, testWordPuzzle.encryptWord("a"));
+   }
+
+   @Test
+   public void encryptWord_VowelsConvertedToDashes_true() {
+     WordPuzzle testWordPuzzle = new WordPuzzle();
+     String testString ="S-MM-R";
+     assertEquals(testString, testWordPuzzle.encryptWord("summer"));
    }
 }

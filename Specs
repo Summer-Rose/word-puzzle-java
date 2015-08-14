@@ -1,0 +1,3 @@
+Converts all letters to uppercase
+Replaces A, E, I, O, U with - (A, -)
+Accepts numbers and punctuation
