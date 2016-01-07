@@ -3,6 +3,7 @@ apply plugin: 'application'
 
 archivesBaseName = "wordpuzzle"
 version = '1.0'
+applicationName = "word-puzzle"
 mainClassName = "WordPuzzle"
 
 repositories {
